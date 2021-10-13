@@ -138,15 +138,7 @@ def draw_im(img, boxes, im_info):
     plt.yticks([])
     plt.show()
 
-
-def get_bool(prompt):
-    while True:
-        try:
-           return {"y":True,"n":False}[input(prompt).lower()]
-        except KeyError:
-           print("Invalid input please enter y or n")
-
-
+    
 def faster_rcnn_ebp(model, input, fname, contrastive=False, target_layer=37):
     '''
     INPUTS:
